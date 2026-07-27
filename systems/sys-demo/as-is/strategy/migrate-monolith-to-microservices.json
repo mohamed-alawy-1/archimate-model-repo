@@ -1,7 +1,7 @@
 {
   "id": "migrate-monolith-to-microservices",
   "layer": "strategy",
-  "archimate_type": "CourseOfAction",
+  "archimate_type": "Course of Action",
   "name": "Migrate Monolith to Microservices",
   "documentation": "A planned course of action to move core legacy banking functions to cloud-native microservices over a 12-month period, decomposing the monolithic system and enabling independent deployability, scalability, and resilience.",
   "confidence": "observed",

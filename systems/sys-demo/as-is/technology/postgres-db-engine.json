@@ -9,6 +9,10 @@
     {
       "source_type": "IaC",
       "locator": "/evidence/infra/terraform/main.tf:aws_db_instance.postgres_db (L6-L7) — engine='postgres', engine_version='15.3'"
+    },
+    {
+      "source_type": "api_spec",
+      "locator": "/evidence/integration/api_spec.txt:5"
     }
   ],
   "relationships": [
@@ -23,6 +27,10 @@
     {
       "target_id": "aws-rds-technology-service",
       "type": "Realization"
+    },
+    {
+      "target_id": "payment-record-data-object",
+      "type": "Serving"
     }
   ]
 }

@@ -9,12 +9,20 @@
     {
       "source_type": "code",
       "locator": "/evidence/code/src/payment_service.py:6-9"
+    },
+    {
+      "source_type": "api_spec",
+      "locator": "/evidence/integration/api_spec.txt:3"
     }
   ],
   "relationships": [
     {
       "target_id": "process-payment-function",
       "type": "Realization"
+    },
+    {
+      "target_id": "order-processing-process",
+      "type": "Serving"
     }
   ]
 }
