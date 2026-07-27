@@ -1,0 +1,20 @@
+{
+  "id": "aws-eks-technology-service",
+  "layer": "technology",
+  "archimate_type": "TechnologyService",
+  "name": "AWS EKS Managed Kubernetes Service",
+  "documentation": "The managed Kubernetes technology service provided by AWS Elastic Kubernetes Service for the payment cluster. This service exposes the Kubernetes API server endpoint and cluster infrastructure to application teams, enabling deployment, scaling, and lifecycle management of containerised workloads. The service is realized by the 'payment-cluster-prod' EKS cluster node and consumed by CI/CD pipelines and application operators deploying to the payment system.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "IaC",
+      "locator": "/evidence/infra/terraform/main.tf:aws_eks_cluster.payment_cluster (L12-L16) — managed EKS service inferred from resource type"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "aws-eks-payment-cluster",
+      "type": "Realization"
+    }
+  ]
+}

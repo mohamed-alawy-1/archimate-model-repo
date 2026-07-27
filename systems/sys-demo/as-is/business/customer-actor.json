@@ -1,0 +1,24 @@
+{
+  "id": "customer-actor",
+  "layer": "business",
+  "archimate_type": "Representation",
+  "name": "Customer",
+  "documentation": "An external Business Actor who initiates a payment request and ultimately receives the payment receipt delivered by the Payment Gateway Business Service. Represents the end-customer in the payment workflow.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "interview_transcript",
+      "locator": "sme_interview.txt, line 6"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "payment-request-object",
+      "type": "Access"
+    },
+    {
+      "target_id": "payment-gateway-service",
+      "type": "Association"
+    }
+  ]
+}

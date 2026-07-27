@@ -1,0 +1,20 @@
+{
+  "id": "aws-rds-technology-service",
+  "layer": "technology",
+  "archimate_type": "TechnologyService",
+  "name": "AWS RDS Managed Database Service",
+  "documentation": "The managed relational database technology service exposed by the AWS RDS infrastructure for the payment system. This service provides database connectivity (connection endpoint, port), automated backups, patching, failover, and monitoring capabilities. Application workloads running on the EKS cluster consume this service to perform persistent read/write operations against the payment_db PostgreSQL database. The service abstracts underlying hardware and OS management from consumers.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "IaC",
+      "locator": "/evidence/infra/terraform/main.tf:aws_db_instance.postgres_db (L3-L10) — managed RDS service inferred from resource type"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "aws-rds-postgres-db",
+      "type": "Realization"
+    }
+  ]
+}

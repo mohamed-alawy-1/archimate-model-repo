@@ -1,0 +1,18 @@
+{
+  "id": "digital-payment-transformation",
+  "layer": "motivation",
+  "archimate_type": "Goal",
+  "name": "Digital Payment Transformation",
+  "documentation": "The organisation aims to modernize its legacy core banking channels by introducing an automated, API-first payment gateway, thereby achieving a full digital transformation of payment operations.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "document",
+      "locator": "/evidence/motivation/vision.txt"
+    }
+  ],
+  "relationships": [
+    { "target_id": "migrate-monolith-to-microservices", "type": "Realization" },
+    { "target_id": "cloud-native-payment-processing",   "type": "Realization" }
+  ]
+}

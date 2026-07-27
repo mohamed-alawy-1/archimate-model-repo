@@ -1,0 +1,15 @@
+{
+  "id": "payment-receipt-representation",
+  "layer": "business",
+  "archimate_type": "Representation",
+  "name": "Payment Receipt",
+  "documentation": "A Representation (tangible or digital document) of the completed payment transaction, delivered by the Payment Gateway Business Service to the Customer at the conclusion of the Order Processing Business Process.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "interview_transcript",
+      "locator": "sme_interview.txt, line 6"
+    }
+  ],
+  "relationships": []
+}

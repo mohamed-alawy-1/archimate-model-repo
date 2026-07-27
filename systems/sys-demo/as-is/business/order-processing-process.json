@@ -1,0 +1,28 @@
+{
+  "id": "order-processing-process",
+  "layer": "business",
+  "archimate_type": "Business Process",
+  "name": "Order Processing",
+  "documentation": "A Business Process executed by the Payment Operations Team that handles the end-to-end processing of payment orders. It is triggered by a payment request and results in the delivery of a payment receipt to the customer via the Payment Gateway Business Service.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "interview_transcript",
+      "locator": "sme_interview.txt, line 5"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "payment-gateway-service",
+      "type": "Triggering"
+    },
+    {
+      "target_id": "payment-request-object",
+      "type": "Access"
+    },
+    {
+      "target_id": "payment-receipt-representation",
+      "type": "Access"
+    }
+  ]
+}

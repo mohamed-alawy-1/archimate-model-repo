@@ -1,0 +1,20 @@
+{
+  "id": "payment-operations-team-actor",
+  "layer": "business",
+  "archimate_type": "Business Actor",
+  "name": "Payment Operations Team",
+  "documentation": "An internal organizational unit (Business Actor) that executes the Order Processing Business Process. Responsible for the operational execution of payment workflows on behalf of the organization.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "interview_transcript",
+      "locator": "sme_interview.txt, line 5"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "order-processing-process",
+      "type": "Assignment"
+    }
+  ]
+}

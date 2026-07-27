@@ -1,0 +1,20 @@
+{
+  "id": "process-payment-service",
+  "layer": "application",
+  "archimate_type": "Application Service",
+  "name": "Process Payment Service",
+  "documentation": "Externally visible application service representing the capability to process a payment transaction. This service is realized by the 'process_payment' application function within the PaymentService component. It accepts a payment amount and an account ID, executes the transaction, and returns a status and transaction ID to the caller.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "/evidence/code/src/payment_service.py:6-9"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "process-payment-function",
+      "type": "Realization"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "customer-service-representative-role",
+  "layer": "business",
+  "archimate_type": "Business Role",
+  "name": "Customer Service Representative",
+  "documentation": "A Business Role responsible for receiving incoming payment requests from customers and initiating the payment workflow. Explicitly identified as a Business Role in the SME interview.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "interview_transcript",
+      "locator": "sme_interview.txt, line 4"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "payment-request-object",
+      "type": "Access"
+    },
+    {
+      "target_id": "order-processing-process",
+      "type": "Assignment"
+    }
+  ]
+}

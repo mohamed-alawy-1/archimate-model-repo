@@ -1,0 +1,172 @@
+[
+  {
+    "id": "process-payment-service-serves-order-processing",
+    "layer": "application",
+    "archimate_type": "Application Service",
+    "name": "Process Payment Service → Serving → Order Processing Process",
+    "documentation": "Cross-layer Serving relationship from the 'Process Payment Service' (Application Service, id: process-payment-service) to the 'Order Processing' Business Process (id: order-processing-process). The application service exposes the payment-processing capability that directly supports the Order Processing business process, satisfying the need of the business layer to execute payment steps within order fulfilment. This relationship is grounded in Integration & Cross-Layer Mapping Spec line 1: 'Payment Service (Application Service) -> Serving -> Payment Process (Business Process)'.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt, line 3 – 'Payment Service (Application Service) -> Serving -> Payment Process (Business Process)'"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "order-processing-process",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "payment-gateway-component-realizes-payment-rest-api",
+    "layer": "application",
+    "archimate_type": "Application Component",
+    "name": "Payment Gateway Service (Component) → Realization → Payment REST API Interface",
+    "documentation": "Same-layer Realization relationship from the 'Payment Gateway Service' Application Component (id: payment-gateway-service — application layer) to the 'Payment REST API' Application Interface (id: payment-rest-api-interface). The component provides the concrete implementation that realises the externally visible Payment REST API interface contract. This relationship is grounded in Integration & Cross-Layer Mapping Spec line 2: 'Payment Gateway Service (Application Component) -> Realizes -> Payment REST API (Application Interface)'.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt, line 4 – 'Payment Gateway Service (Application Component) -> Realizes -> Payment REST API (Application Interface)'"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "payment-rest-api-interface",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "postgres-db-engine-serves-payment-record-data-object",
+    "layer": "technology",
+    "archimate_type": "System Software",
+    "name": "PostgreSQL DB Engine → Serving → Payment Record Data Object",
+    "documentation": "Cross-layer Serving relationship from the 'PostgreSQL DB Engine' System Software element (id: postgres-db-engine, Technology layer) to the 'Payment Record' Data Object (id: payment-record-data-object, Application layer). The database engine provides the persistent storage and query capabilities that serve the Payment Record data object used by the application layer. This relationship is grounded in Integration & Cross-Layer Mapping Spec line 3: 'PostgreSQL Database (System Software) -> Serves -> Payment Record DB (Data Object)'.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt, line 5 – 'PostgreSQL Database (System Software) -> Serves -> Payment Record DB (Data Object)'"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "payment-record-data-object",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "broken-reference-payment-gateway-to-nonexistent",
+    "layer": "application",
+    "archimate_type": "Application Component",
+    "name": "BROKEN REFERENCE – Payment Gateway Service → Serving → non-existent-element-id-xyz",
+    "documentation": "WARNING – BROKEN / UNRESOLVABLE REFERENCE DETECTED. Integration & Cross-Layer Mapping Spec line 4 (and 6-7) specifies a Serving relationship from 'Payment Gateway Service' (Application Component, id: payment-gateway-service) to target id 'non-existent-element-id-xyz'. This target element ID does NOT exist in the extracted model catalogue for any layer (Motivation, Strategy, Business, Application, or Technology). In accordance with the MANDATORY ELEMENT VALIDATION RULE, this relationship has been intentionally omitted from the 'relationships' array and no relationship entry is recorded. This entry is retained solely as an audit trail for the validation failure flagged as test case F2 / E5 in the spec. Remediation required: identify the correct target element ID or create the missing element before this relationship can be modelled.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt, lines 6-7 – 'Intentional Broken Target Reference Test: Payment Gateway Service -> Serving -> non-existent-element-id-xyz'"
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "id": "aws-eks-technology-service-serves-payment-service-component",
+    "layer": "technology",
+    "archimate_type": "Technology Service",
+    "name": "AWS EKS Technology Service → Serving → Payment Service Component",
+    "documentation": "Inferred cross-layer Serving relationship from the 'AWS EKS Technology Service' (id: aws-eks-technology-service, Technology layer) to the 'Payment Service' Application Component (id: payment-service-component, Application layer). The EKS managed Kubernetes technology service provides the container orchestration runtime and networking capability that directly supports execution of the Payment Service component. This follows ArchiMate 3.2 metamodel best practice where Technology Services serve Application Components across the Technology-to-Application layer boundary.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt – inferred cross-layer relationship based on metamodel best practices (Technology Service → Serving → Application Component)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "payment-service-component",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "aws-rds-technology-service-serves-payment-record-data-object",
+    "layer": "technology",
+    "archimate_type": "Technology Service",
+    "name": "AWS RDS Technology Service → Serving → Payment Record Data Object",
+    "documentation": "Inferred cross-layer Serving relationship from the 'AWS RDS Technology Service' (id: aws-rds-technology-service, Technology layer) to the 'Payment Record' Data Object (id: payment-record-data-object, Application layer). The RDS managed database technology service provides the relational data-persistence capability that supports the Payment Record data object consumed by the application layer. This follows ArchiMate 3.2 metamodel best practice where Technology Services serve Application-layer Data Objects.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt – inferred cross-layer relationship based on metamodel best practices (Technology Service → Serving → Data Object)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "payment-record-data-object",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "cloud-native-payment-processing-realizes-order-processing-process",
+    "layer": "strategy",
+    "archimate_type": "Capability",
+    "name": "Cloud-Native Payment Processing Capability → Realization → Order Processing Business Process",
+    "documentation": "Inferred cross-layer Realization relationship from the 'Cloud-Native Payment Processing' Strategy Capability (id: cloud-native-payment-processing, Strategy layer) to the 'Order Processing' Business Process (id: order-processing-process, Business layer). The organisational capability to build and operate cloud-native payment infrastructure is realised through — and concretely expressed as — the Order Processing business process. This follows ArchiMate 3.2 metamodel best practice where Strategy Capabilities are realised by Business-layer processes.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt – inferred cross-layer relationship based on metamodel best practices (Strategy Capability → Realization → Business Process)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "order-processing-process",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "migrate-monolith-influences-payment-service-component",
+    "layer": "strategy",
+    "archimate_type": "CourseOfAction",
+    "name": "Migrate Monolith to Microservices → Influence → Payment Service Component",
+    "documentation": "Inferred cross-layer Influence relationship from the 'Migrate Monolith to Microservices' Strategy CourseOfAction (id: migrate-monolith-to-microservices, Strategy layer) to the 'Payment Service' Application Component (id: payment-service-component, Application layer). The strategic action of decomposing the legacy monolith into microservices directly influences the structure, boundaries, and design of the Payment Service application component. This follows ArchiMate 3.2 metamodel best practice where Strategy CourseOfAction elements influence Application-layer components.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt – inferred cross-layer relationship based on metamodel best practices (Strategy CourseOfAction → Influence → Application Component)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "payment-service-component",
+        "type": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "integration-mapping-summary",
+    "layer": "application",
+    "archimate_type": "Association",
+    "name": "Integration Mapping Summary",
+    "documentation": "Summary of all cross-layer relationship mappings derived from /evidence/integration/api_spec.txt and ArchiMate 3.2 metamodel best practices.\n\n=== SPEC-GROUNDED RELATIONSHIPS (Lines 1–4) ===\n\n[1] VALID – process-payment-service → Serving → order-processing-process\n    Source: Application Service (process-payment-service) serves Business Process (order-processing-process).\n    Evidence: api_spec.txt line 3 – 'Payment Service (Application Service) -> Serving -> Payment Process (Business Process)'.\n\n[2] VALID – payment-gateway-service [app] → Realization → payment-rest-api-interface\n    Source: Application Component (payment-gateway-service) realises Application Interface (payment-rest-api-interface).\n    Evidence: api_spec.txt line 4 – 'Payment Gateway Service (Application Component) -> Realizes -> Payment REST API (Application Interface)'.\n\n[3] VALID – postgres-db-engine → Serving → payment-record-data-object\n    Source: System Software (postgres-db-engine) serves Data Object (payment-record-data-object).\n    Evidence: api_spec.txt line 5 – 'PostgreSQL Database (System Software) -> Serves -> Payment Record DB (Data Object)'.\n\n[4] *** BROKEN REFERENCE – OMITTED *** – payment-gateway-service → Serving → non-existent-element-id-xyz\n    Target element 'non-existent-element-id-xyz' does NOT exist in the model catalogue.\n    Relationship entry intentionally excluded per MANDATORY ELEMENT VALIDATION RULE.\n    Evidence: api_spec.txt lines 6-7 – 'Intentional Broken Target Reference Test (for F2 / E5 validation failure)'.\n    Remediation: Identify the correct target element ID or create the missing element.\n\n=== INFERRED RELATIONSHIPS (Metamodel Best Practices) ===\n\n[5] INFERRED – aws-eks-technology-service → Serving → payment-service-component\n    Technology Service (aws-eks-technology-service) serves Application Component (payment-service-component).\n\n[6] INFERRED – aws-rds-technology-service → Serving → payment-record-data-object\n    Technology Service (aws-rds-technology-service) serves Data Object (payment-record-data-object).\n\n[7] INFERRED – cloud-native-payment-processing → Realization → order-processing-process\n    Strategy Capability (cloud-native-payment-processing) realised by Business Process (order-processing-process).\n\n[8] INFERRED – migrate-monolith-to-microservices → Influence → payment-service-component\n    Strategy CourseOfAction (migrate-monolith-to-microservices) influences Application Component (payment-service-component).\n\n=== TOTALS ===\nValid relationships mapped:   7\nBroken references detected:   1 (non-existent-element-id-xyz – excluded from model)\nTotal spec lines processed:   4\nTotal inferred relationships: 4",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "api_spec",
+        "locator": "/evidence/integration/api_spec.txt – full document"
+      }
+    ],
+    "relationships": []
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "id": "merchant-settlement-service",
+  "layer": "business",
+  "archimate_type": "Business Service",
+  "name": "Merchant Settlement",
+  "documentation": "A Business Service inferred from the reference to 'PaymentSvc handles merchant settlement' in the interview transcript. It represents the settlement service offered to merchants as part of the broader payment operations, associated with the Payment Gateway service.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "interview_transcript",
+      "locator": "sme_interview.txt, line 7"
+    }
+  ],
+  "relationships": []
+}

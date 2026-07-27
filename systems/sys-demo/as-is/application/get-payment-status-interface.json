@@ -1,0 +1,28 @@
+{
+  "id": "get-payment-status-interface",
+  "layer": "application",
+  "archimate_type": "Application Interface",
+  "name": "Payment REST API Endpoint",
+  "documentation": "Entry point exposing payment status retrieval to external consumers. Implemented as the method 'get_payment_status(transaction_id)' in the PaymentService class and explicitly annotated in the source as 'Application Interface: Payment REST API Endpoint'. It accepts a transaction ID and returns the current status of that transaction, acting as the outward-facing interface of the Payment Gateway Service.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "/evidence/code/src/payment_service.py:11-13"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "payment-service-component",
+      "type": "Composition"
+    },
+    {
+      "target_id": "get-payment-status-service",
+      "type": "Realization"
+    },
+    {
+      "target_id": "payment-record-data-object",
+      "type": "Access"
+    }
+  ]
+}

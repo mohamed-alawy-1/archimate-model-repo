@@ -1,0 +1,24 @@
+{
+  "id": "payment-db-artifact",
+  "layer": "technology",
+  "archimate_type": "Artifact",
+  "name": "payment_db Database Artifact",
+  "documentation": "The 'payment_db' PostgreSQL database artifact representing the deployable database instance provisioned on the AWS RDS node. This artifact encapsulates the database schema, stored data, configuration (engine version 15.3, 20 GB allocated storage, db.t3.micro instance class), and all associated database objects (tables, indexes, sequences, procedures) that support the payment system's persistence needs. It is instantiated and hosted by the aws-rds-postgres-db Node.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "IaC",
+      "locator": "/evidence/infra/terraform/main.tf:aws_db_instance.postgres_db (L3-L10), name = \"payment_db\""
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "aws-rds-postgres-db",
+      "type": "Association"
+    },
+    {
+      "target_id": "postgres-db-engine",
+      "type": "Realization"
+    }
+  ]
+}
