@@ -7,7 +7,7 @@
   "confidence": "observed",
   "evidence": [
     {
-      "source_type": "document",
+      "source_type": "documentation",
       "locator": "/evidence/motivation/vision.txt"
     }
   ],
