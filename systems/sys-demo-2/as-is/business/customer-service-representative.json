@@ -1,0 +1,15 @@
+{
+  "id": "customer-service-representative",
+  "layer": "business",
+  "archimate_type": "BusinessRole",
+  "name": "Customer Service Representative",
+  "documentation": "A business role responsible for handling escalations and manual overrides within the payment processing workflow. This role intervenes when automated processes fail or when human judgment and manual reconciliation are required.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "doc",
+      "locator": "/evidence/demo-system/docs/architecture.md, Section: Business Layer, line 9"
+    }
+  ],
+  "relationships": []
+}

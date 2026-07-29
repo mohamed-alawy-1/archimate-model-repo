@@ -1,0 +1,24 @@
+{
+  "id": "customer",
+  "layer": "business",
+  "archimate_type": "BusinessActor",
+  "name": "Customer",
+  "documentation": "An individual or organisation that initiates payment requests through the checkout process. The Customer is the primary external actor who triggers the Customer Checkout Process in the legacy payment system.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "doc",
+      "locator": "/evidence/demo-system/docs/architecture.md, Section: Business Layer, line 8"
+    },
+    {
+      "source_type": "interview",
+      "locator": "/evidence/demo-system/interviews/cto_interview.txt, line 2"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "customer-checkout-process",
+      "type": "Triggering"
+    }
+  ]
+}
