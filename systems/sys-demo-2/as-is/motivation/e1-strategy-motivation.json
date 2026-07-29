@@ -1,0 +1,146 @@
+[
+  {
+    "id": "goal-microservices-transition",
+    "layer": "motivation",
+    "archimate_type": "Goal",
+    "name": "Transition to Automated Microservices Architecture",
+    "documentation": "The organisation's high-level strategic intent to move away from the legacy monolithic payment processing system toward an automated microservices-based architecture. This goal drives architectural decision-making and investment priorities for the payment platform.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "doc",
+        "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "driver-reduce-latency-realtime-reconciliation",
+        "type": "Association"
+      },
+      {
+        "target_id": "coa-migrate-to-microservices",
+        "type": "Association"
+      }
+    ]
+  },
+  {
+    "id": "driver-reduce-latency-realtime-reconciliation",
+    "layer": "motivation",
+    "archimate_type": "Driver",
+    "name": "Transaction Latency and Real-Time Reconciliation Pressure",
+    "documentation": "An internal and operational driver stemming from the inadequacy of the current monolithic system to handle transaction processing at the required speed, and its inability to support real-time reconciliation. This driver motivates the strategic shift to microservices and improved automation.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "doc",
+        "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "assessment-monolith-processing-limitations",
+        "type": "Association"
+      }
+    ]
+  },
+  {
+    "id": "assessment-monolith-processing-limitations",
+    "layer": "motivation",
+    "archimate_type": "Assessment",
+    "name": "Monolith Causes Processing Delays and Reconciliation Gaps",
+    "documentation": "An analysis of the driver revealing that the legacy monolithic payment processing architecture is the root cause of elevated transaction latency and the inability to perform real-time reconciliation. This assessment informs the decision to adopt a microservices architecture as the strategic response.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "doc",
+        "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "driver-reduce-latency-realtime-reconciliation",
+        "type": "Association"
+      },
+      {
+        "target_id": "goal-microservices-transition",
+        "type": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "cap-real-time-payment-processing",
+    "layer": "strategy",
+    "archimate_type": "Capability",
+    "name": "Real-Time Payment Processing",
+    "documentation": "The stable, long-term organisational capability to process payment transactions with low latency in real time. This capability is a target outcome of the microservices migration and underpins the business goal of reducing transaction processing latency.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "doc",
+        "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "goal-microservices-transition",
+        "type": "Association"
+      },
+      {
+        "target_id": "coa-migrate-to-microservices",
+        "type": "Association"
+      }
+    ]
+  },
+  {
+    "id": "cap-automated-reconciliation",
+    "layer": "strategy",
+    "archimate_type": "Capability",
+    "name": "Automated Real-Time Reconciliation",
+    "documentation": "The organisational capability to perform payment reconciliation automatically and in real time, eliminating the manual reconciliation processes inherent in the legacy monolith. This capability directly addresses the driver of reconciliation latency.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "doc",
+        "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "driver-reduce-latency-realtime-reconciliation",
+        "type": "Association"
+      },
+      {
+        "target_id": "coa-migrate-to-microservices",
+        "type": "Association"
+      }
+    ]
+  },
+  {
+    "id": "coa-migrate-to-microservices",
+    "layer": "strategy",
+    "archimate_type": "CourseOfAction",
+    "name": "Migrate Payment Processing to Microservices Architecture",
+    "documentation": "The strategic course of action to decompose the legacy monolithic payment processing system into discrete, independently deployable microservices. This approach is designed to achieve lower transaction latency, enable real-time reconciliation, and improve system scalability and maintainability.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "doc",
+        "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "cap-real-time-payment-processing",
+        "type": "Realization"
+      },
+      {
+        "target_id": "cap-automated-reconciliation",
+        "type": "Realization"
+      },
+      {
+        "target_id": "goal-microservices-transition",
+        "type": "Association"
+      }
+    ]
+  }
+]

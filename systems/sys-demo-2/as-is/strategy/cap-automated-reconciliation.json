@@ -1,0 +1,24 @@
+{
+  "id": "cap-automated-reconciliation",
+  "layer": "strategy",
+  "archimate_type": "Capability",
+  "name": "Automated Real-Time Reconciliation",
+  "documentation": "The organisational capability to perform payment reconciliation automatically and in real time, eliminating the manual reconciliation processes inherent in the legacy monolith. This capability directly addresses the driver of reconciliation latency.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "doc",
+      "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "driver-reduce-latency-realtime-reconciliation",
+      "type": "Association"
+    },
+    {
+      "target_id": "coa-migrate-to-microservices",
+      "type": "Association"
+    }
+  ]
+}
