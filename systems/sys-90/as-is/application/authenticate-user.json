@@ -1,0 +1,20 @@
+{
+  "id": "authenticate-user",
+  "layer": "application",
+  "archimate_type": "Application Function",
+  "name": "Authenticate User Function",
+  "documentation": "Automated application function validating credentials against the database user store.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "/evidence/code/user_service.py:10-13"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "user-credentials",
+      "type": "Access"
+    }
+  ]
+}

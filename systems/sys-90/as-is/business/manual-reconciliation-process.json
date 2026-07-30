@@ -1,0 +1,20 @@
+{
+  "id": "manual-reconciliation-process",
+  "layer": "business",
+  "archimate_type": "Business Process",
+  "name": "Manual Reconciliation Process",
+  "documentation": "Operational business process used to manually reconcile payment transactions and clear discrepancies.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "doc",
+      "locator": "/evidence/README.md:line 18"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "payment",
+      "type": "Access"
+    }
+  ]
+}

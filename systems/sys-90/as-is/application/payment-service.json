@@ -1,0 +1,32 @@
+{
+  "id": "payment-service",
+  "layer": "application",
+  "archimate_type": "Application Component",
+  "name": "Payment Processing Service",
+  "documentation": "Core payment execution component that orchestrates payment processing and calls external payment gateway services.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "/evidence/code/payment_service.py:6-17"
+    },
+    {
+      "source_type": "doc",
+      "locator": "/evidence/docs/architecture.md:8"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "customer-checkout-process",
+      "type": "Serving"
+    },
+    {
+      "target_id": "process-payment",
+      "type": "Assignment"
+    },
+    {
+      "target_id": "payment-gateway-client",
+      "type": "Serving"
+    }
+  ]
+}

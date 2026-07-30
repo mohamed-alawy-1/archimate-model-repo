@@ -1,0 +1,15 @@
+{
+  "id": "payment",
+  "layer": "business",
+  "archimate_type": "Business Object",
+  "name": "Payment",
+  "documentation": "Business data object representing a financial payment transaction initiated by a customer.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "interview",
+      "locator": "/evidence/interviews/cto_interview.txt:line 2"
+    }
+  ],
+  "relationships": []
+}
