@@ -1,0 +1,24 @@
+{
+  "id": "sys-50-container-hosting-service",
+  "layer": "technology",
+  "archimate_type": "Technology Service",
+  "name": "Container Hosting Service",
+  "documentation": "Container runtime compute and orchestration technology service provided by the AWS ECS Cluster.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "infrastructure",
+      "locator": "/evidence/terraform/main.tf:aws_ecs_cluster.app_cluster"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-50-payment-service-app-comp",
+      "type": "Serving"
+    },
+    {
+      "target_id": "sys-50-user-service-app-comp",
+      "type": "Serving"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "sys-50-database-service",
+  "layer": "technology",
+  "archimate_type": "Technology Service",
+  "name": "Relational Database Service",
+  "documentation": "Relational database querying and data persistence service provided by PostgreSQL 15.3.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "infrastructure",
+      "locator": "/evidence/terraform/main.tf:aws_db_instance.postgres"
+    },
+    {
+      "source_type": "documentation",
+      "locator": "/evidence/docs/architecture.md"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-50-user-service-app-comp",
+      "type": "Serving"
+    },
+    {
+      "target_id": "sys-50-payment-service-app-comp",
+      "type": "Serving"
+    }
+  ]
+}

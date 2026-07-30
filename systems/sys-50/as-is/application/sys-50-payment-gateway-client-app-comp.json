@@ -1,0 +1,28 @@
+{
+  "id": "sys-50-payment-gateway-client-app-comp",
+  "layer": "application",
+  "archimate_type": "Application Component",
+  "name": "Payment Gateway Client Component",
+  "documentation": "Client integration component responsible for connecting to external/internal Payment Gateway endpoints for card processing.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "evidence/code/payment_service.py:20-24"
+    },
+    {
+      "source_type": "documentation",
+      "locator": "evidence/docs/architecture.md:9"
+    },
+    {
+      "source_type": "interview",
+      "locator": "evidence/interviews/cto_interview.txt:4"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-50-payment-gateway-app-if",
+      "type": "Serving"
+    }
+  ]
+}

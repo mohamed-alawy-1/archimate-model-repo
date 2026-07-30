@@ -1,0 +1,121 @@
+[
+  {
+    "id": "sys-50-stakeholder-cto",
+    "layer": "motivation",
+    "archimate_type": "Stakeholder",
+    "name": "Chief Technology Officer",
+    "documentation": "Key executive stakeholder responsible for payment processing architecture, system modernization, and operational efficiency.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "interview",
+        "locator": "/evidence/interviews/cto_interview.txt:1-6"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-driver-reduce-latency",
+        "type": "Association"
+      },
+      {
+        "target_id": "sys-50-driver-real-time-reconciliation",
+        "type": "Association"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-driver-reduce-latency",
+    "layer": "motivation",
+    "archimate_type": "Driver",
+    "name": "Reduce Transaction Processing Latency",
+    "documentation": "Strategic driver motivating architectural changes to lower transaction processing latency across payment flows.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:5"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-goal-microservices-transition",
+        "type": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-driver-real-time-reconciliation",
+    "layer": "motivation",
+    "archimate_type": "Driver",
+    "name": "Enable Real-Time Reconciliation",
+    "documentation": "Operational driver motivating real-time verification and financial reconciliation of payment transactions.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:5"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-goal-microservices-transition",
+        "type": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-goal-microservices-transition",
+    "layer": "motivation",
+    "archimate_type": "Goal",
+    "name": "Transition to Microservices Architecture",
+    "documentation": "Strategic goal to transition from a monolithic payment processing system to an automated microservices architecture.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:4"
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "id": "sys-50-req-latency-reduction",
+    "layer": "motivation",
+    "archimate_type": "Requirement",
+    "name": "Low Latency Transaction Processing Requirement",
+    "documentation": "Architectural requirement specifying that customer payment execution must meet low latency processing targets.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:5"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-goal-microservices-transition",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-req-real-time-reconciliation",
+    "layer": "motivation",
+    "archimate_type": "Requirement",
+    "name": "Real-Time Transaction Reconciliation Requirement",
+    "documentation": "Architectural requirement mandating real-time financial reconciliation capability across payment channels.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:5"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-goal-microservices-transition",
+        "type": "Realization"
+      }
+    ]
+  }
+]

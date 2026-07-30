@@ -1,0 +1,112 @@
+[
+  {
+    "id": "sys-50-coa-monolith-to-microservices",
+    "layer": "strategy",
+    "archimate_type": "Course of Action",
+    "name": "Monolith to Microservices Transition Plan",
+    "documentation": "Strategic course of action and migration path to decompose the legacy monolithic payment processor into automated microservices.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:4"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-cap-payment-processing",
+        "type": "Realization"
+      },
+      {
+        "target_id": "sys-50-cap-real-time-reconciliation",
+        "type": "Realization"
+      },
+      {
+        "target_id": "sys-50-goal-microservices-transition",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-cap-payment-processing",
+    "layer": "strategy",
+    "archimate_type": "Capability",
+    "name": "Automated Payment Processing Capability",
+    "documentation": "Core business capability to automatically process customer payments, orchestrate transaction workflows, and interface with payment gateways.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:4,8"
+      },
+      {
+        "source_type": "interview",
+        "locator": "/evidence/interviews/cto_interview.txt:2"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-goal-microservices-transition",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-cap-real-time-reconciliation",
+    "layer": "strategy",
+    "archimate_type": "Capability",
+    "name": "Real-Time Financial Reconciliation Capability",
+    "documentation": "Organizational capability enabling immediate verification and real-time reconciliation of financial transaction records.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:5"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-req-real-time-reconciliation",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-vs-payment-fulfillment",
+    "layer": "strategy",
+    "archimate_type": "Value Stream",
+    "name": "Payment Fulfillment & Settlement Value Stream",
+    "documentation": "End-to-end value stream starting from checkout payment initiation, credential verification, gateway execution, through to financial settlement.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "interview",
+        "locator": "/evidence/interviews/cto_interview.txt:2-6"
+      },
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:8-10"
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "id": "sys-50-res-customer-payment-data",
+    "layer": "strategy",
+    "archimate_type": "Resource",
+    "name": "Customer Payment & Credential Data Resource",
+    "documentation": "Strategic data resource asset comprising customer profile data, payment transaction payloads, and credential stores.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "/evidence/code/payment_service.py:12-17"
+      },
+      {
+        "source_type": "code",
+        "locator": "/evidence/code/user_service.py:10-13"
+      }
+    ],
+    "relationships": []
+  }
+]

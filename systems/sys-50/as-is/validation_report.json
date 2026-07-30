@@ -1,0 +1,14 @@
+{
+  "system_id": "sys-50",
+  "status": "PASSED",
+  "element_counts": {
+    "motivation": 6,
+    "strategy": 5,
+    "business": 2,
+    "application": 10,
+    "technology": 6
+  },
+  "total_relationships": 28,
+  "violations": [],
+  "elements_missing_evidence": []
+}
