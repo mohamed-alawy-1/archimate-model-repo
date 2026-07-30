@@ -1,0 +1,20 @@
+{
+  "id": "driver-reduce-latency-realtime-reconciliation",
+  "layer": "motivation",
+  "archimate_type": "Driver",
+  "name": "Transaction Latency and Real-Time Reconciliation Pressure",
+  "documentation": "An internal and operational driver stemming from the inadequacy of the current monolithic system to handle transaction processing at the required speed, and its inability to support real-time reconciliation. This driver motivates the strategic shift to microservices and improved automation.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "doc",
+      "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "assessment-monolith-processing-limitations",
+      "type": "Association"
+    }
+  ]
+}

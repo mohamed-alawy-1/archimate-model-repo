@@ -1,0 +1,24 @@
+{
+  "id": "assessment-monolith-processing-limitations",
+  "layer": "motivation",
+  "archimate_type": "Assessment",
+  "name": "Monolith Causes Processing Delays and Reconciliation Gaps",
+  "documentation": "An analysis of the driver revealing that the legacy monolithic payment processing architecture is the root cause of elevated transaction latency and the inability to perform real-time reconciliation. This assessment informs the decision to adopt a microservices architecture as the strategic response.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "doc",
+      "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "driver-reduce-latency-realtime-reconciliation",
+      "type": "Association"
+    },
+    {
+      "target_id": "goal-microservices-transition",
+      "type": "Influence"
+    }
+  ]
+}

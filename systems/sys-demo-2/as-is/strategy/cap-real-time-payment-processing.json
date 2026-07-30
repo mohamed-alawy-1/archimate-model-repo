@@ -1,0 +1,24 @@
+{
+  "id": "cap-real-time-payment-processing",
+  "layer": "strategy",
+  "archimate_type": "Capability",
+  "name": "Real-Time Payment Processing",
+  "documentation": "The stable, long-term organisational capability to process payment transactions with low latency in real time. This capability is a target outcome of the microservices migration and underpins the business goal of reducing transaction processing latency.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "doc",
+      "locator": "/evidence/demo-system/docs/architecture.md#strategic-goals-and-drivers"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "goal-microservices-transition",
+      "type": "Association"
+    },
+    {
+      "target_id": "coa-migrate-to-microservices",
+      "type": "Association"
+    }
+  ]
+}

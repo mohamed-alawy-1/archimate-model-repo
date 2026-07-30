@@ -1,0 +1,18 @@
+{
+  "id": "security-and-compliance",
+  "layer": "motivation",
+  "archimate_type": "Requirement",
+  "name": "Security & Compliance",
+  "documentation": "All payment transactions must enforce PCI-DSS compliance and OAuth2 token verification, ensuring that every interaction with the payment gateway meets mandatory security and regulatory standards.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "documentation",
+      "locator": "/evidence/motivation/vision.txt"
+    }
+  ],
+  "relationships": [
+    { "target_id": "migrate-monolith-to-microservices", "type": "Influence" },
+    { "target_id": "cloud-native-payment-processing",   "type": "Influence" }
+  ]
+}

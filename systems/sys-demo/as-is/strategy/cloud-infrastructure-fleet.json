@@ -1,0 +1,17 @@
+{
+  "id": "cloud-infrastructure-fleet",
+  "layer": "strategy",
+  "archimate_type": "Resource",
+  "name": "Cloud Infrastructure Fleet",
+  "documentation": "The ensemble of cloud-based compute, networking, and storage assets provisioned to host and run cloud-native microservices, enabling high-availability, elastic scaling, and asynchronous transaction processing for the digital payment gateway.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "documentation",
+      "locator": "/evidence/strategy/plan.txt"
+    }
+  ],
+  "relationships": [
+    { "target_id": "cloud-native-payment-processing", "type": "Association" }
+  ]
+}
