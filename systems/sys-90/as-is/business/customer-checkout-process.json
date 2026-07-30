@@ -1,0 +1,24 @@
+{
+  "id": "customer-checkout-process",
+  "layer": "business",
+  "archimate_type": "Business Process",
+  "name": "Customer Checkout Process",
+  "documentation": "Business workflow initiated by a customer to execute a payment transaction.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "interview",
+      "locator": "/evidence/interviews/cto_interview.txt:line 2"
+    },
+    {
+      "source_type": "doc",
+      "locator": "/evidence/docs/architecture.md:line 13"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "payment",
+      "type": "Access"
+    }
+  ]
+}

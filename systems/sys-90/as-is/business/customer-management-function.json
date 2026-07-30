@@ -1,0 +1,15 @@
+{
+  "id": "customer-management-function",
+  "layer": "business",
+  "archimate_type": "Business Function",
+  "name": "Customer Management",
+  "documentation": "Business function responsible for managing customer accounts, profiles, and relationships.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "doc",
+      "locator": "/evidence/README.md:line 18"
+    }
+  ],
+  "relationships": []
+}

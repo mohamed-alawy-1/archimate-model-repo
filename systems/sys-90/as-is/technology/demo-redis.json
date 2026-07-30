@@ -1,0 +1,20 @@
+{
+  "id": "demo-redis",
+  "layer": "technology",
+  "archimate_type": "Node",
+  "name": "demo-redis",
+  "documentation": "AWS ElastiCache Redis cluster (cache.t3.micro, engine redis) providing in-memory data caching.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "tf",
+      "locator": "/evidence/terraform/main.tf:aws_elasticache_cluster.redis"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "payment-service",
+      "type": "Serving"
+    }
+  ]
+}
