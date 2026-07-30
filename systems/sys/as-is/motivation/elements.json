@@ -1,0 +1,22 @@
+[
+  {
+    "id": "sys-stakeholder",
+    "layer": "motivation",
+    "archimate_type": "Stakeholder",
+    "name": "System Stakeholder",
+    "documentation": "Primary stakeholder for system 'sys' interested in system goals and strategy.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "doc",
+        "locator": "/evidence/motivation/ (directory initialized/checked)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-capability",
+        "type": "Association"
+      }
+    ]
+  }
+]

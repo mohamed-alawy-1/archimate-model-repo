@@ -1,0 +1,105 @@
+[
+  {
+    "id": "sys-application-component",
+    "layer": "application",
+    "archimate_type": "ApplicationComponent",
+    "name": "System Application Component",
+    "documentation": "Main software execution component hosting core logic and processing capabilities for system 'sys'.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "/evidence/code/ (directory initialized/checked)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-application-service",
+        "type": "Realization"
+      },
+      {
+        "target_id": "sys-application-function",
+        "type": "Assignment"
+      },
+      {
+        "target_id": "sys-capability",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-application-service",
+    "layer": "application",
+    "archimate_type": "ApplicationService",
+    "name": "System Application Service",
+    "documentation": "Application service exposing functional software features and automated operations of system 'sys'.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "/evidence/code/ (directory initialized/checked)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-business-actor",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "sys-application-interface",
+    "layer": "application",
+    "archimate_type": "ApplicationInterface",
+    "name": "System Application Interface",
+    "documentation": "Access endpoint interface facilitating external and API communication with system 'sys'.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "/evidence/code/ (directory initialized/checked)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-application-service",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "sys-application-function",
+    "layer": "application",
+    "archimate_type": "ApplicationFunction",
+    "name": "System Core Processing Function",
+    "documentation": "Automated internal functional processing and business logic execution within system 'sys'.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "/evidence/code/ (directory initialized/checked)"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-data-object",
+        "type": "Access"
+      }
+    ]
+  },
+  {
+    "id": "sys-data-object",
+    "layer": "application",
+    "archimate_type": "DataObject",
+    "name": "System Data Object",
+    "documentation": "Logical data structure and domain entity model managed and processed by system 'sys'.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "schema",
+        "locator": "/evidence/code/ (directory initialized/checked)"
+      }
+    ],
+    "relationships": []
+  }
+]

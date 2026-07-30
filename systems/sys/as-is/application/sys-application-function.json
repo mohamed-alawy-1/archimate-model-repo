@@ -1,0 +1,20 @@
+{
+  "id": "sys-application-function",
+  "layer": "application",
+  "archimate_type": "ApplicationFunction",
+  "name": "System Core Processing Function",
+  "documentation": "Automated internal functional processing and business logic execution within system 'sys'.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "/evidence/code/ (directory initialized/checked)"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-data-object",
+      "type": "Access"
+    }
+  ]
+}

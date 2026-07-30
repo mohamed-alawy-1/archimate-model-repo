@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sys-capability",
+    "layer": "strategy",
+    "archimate_type": "Capability",
+    "name": "System Core Capability",
+    "documentation": "Core baseline strategy capability for system 'sys'.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "strategy",
+        "locator": "/evidence/strategy/ (directory initialized/checked)"
+      }
+    ],
+    "relationships": []
+  }
+]

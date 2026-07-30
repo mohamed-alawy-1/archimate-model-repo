@@ -1,0 +1,28 @@
+{
+  "id": "sys-application-component",
+  "layer": "application",
+  "archimate_type": "ApplicationComponent",
+  "name": "System Application Component",
+  "documentation": "Main software execution component hosting core logic and processing capabilities for system 'sys'.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "/evidence/code/ (directory initialized/checked)"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-application-service",
+      "type": "Realization"
+    },
+    {
+      "target_id": "sys-application-function",
+      "type": "Assignment"
+    },
+    {
+      "target_id": "sys-capability",
+      "type": "Realization"
+    }
+  ]
+}

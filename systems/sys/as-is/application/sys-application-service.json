@@ -1,0 +1,20 @@
+{
+  "id": "sys-application-service",
+  "layer": "application",
+  "archimate_type": "ApplicationService",
+  "name": "System Application Service",
+  "documentation": "Application service exposing functional software features and automated operations of system 'sys'.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "/evidence/code/ (directory initialized/checked)"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-business-actor",
+      "type": "Serving"
+    }
+  ]
+}

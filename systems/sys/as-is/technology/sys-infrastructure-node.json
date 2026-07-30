@@ -1,0 +1,20 @@
+{
+  "id": "sys-infrastructure-node",
+  "layer": "technology",
+  "archimate_type": "Node",
+  "name": "System Infrastructure Node",
+  "documentation": "Primary computational execution environment hosting runtime software and infrastructure services for system 'sys'.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "iac",
+      "locator": "/evidence/infra/ (directory initialized/checked)"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-runtime-system-software",
+      "type": "Serving"
+    }
+  ]
+}

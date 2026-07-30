@@ -1,0 +1,20 @@
+{
+  "id": "sys-communication-network",
+  "layer": "technology",
+  "archimate_type": "Communication Network",
+  "name": "System Network Infrastructure",
+  "documentation": "Internal network infrastructure providing connectivity, packet routing, and communication channels for system 'sys' nodes.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "iac",
+      "locator": "/evidence/infra/ (directory initialized/checked)"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-infrastructure-node",
+      "type": "Association"
+    }
+  ]
+}
