@@ -1,0 +1,15 @@
+{
+  "id": "user-authentication-function",
+  "layer": "application",
+  "archimate_type": "ApplicationFunction",
+  "name": "User Authentication Function",
+  "documentation": "Automated application function that validates user credentials (username and password hash) against the user data store in Postgres. Implemented as the 'authenticate_user' method of UserService. Queries the 'users' table and returns a boolean indicating authentication success. Accesses the User Profile Data Object.",
+  "confidence": "observed",
+  "evidence": [
+    {"source_type": "code", "locator": "/evidence/demo-system/code/user_service.py:10-13"},
+    {"source_type": "code", "locator": "/evidence/demo-system/docs/architecture.md:20"}
+  ],
+  "relationships": [
+    {"target_id": "user-profile", "type": "Access"}
+  ]
+}

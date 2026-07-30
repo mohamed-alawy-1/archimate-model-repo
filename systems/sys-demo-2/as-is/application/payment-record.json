@@ -1,0 +1,13 @@
+{
+  "id": "payment-record",
+  "layer": "application",
+  "archimate_type": "DataObject",
+  "name": "Payment Record",
+  "documentation": "Logical data structure representing transactional payment data stored in the Postgres database. Accessed and written by the Payment Processing Function during payment execution. Captures key payment attributes including amount, currency, and transaction status. Referenced in the architecture documentation as being stored in Postgres.",
+  "confidence": "observed",
+  "evidence": [
+    {"source_type": "code", "locator": "/evidence/demo-system/docs/architecture.md:18"},
+    {"source_type": "code", "locator": "/evidence/demo-system/interviews/cto_interview.txt:8"}
+  ],
+  "relationships": []
+}
