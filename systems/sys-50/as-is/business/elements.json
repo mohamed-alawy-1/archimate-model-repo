@@ -1,0 +1,46 @@
+[
+  {
+    "id": "sys-50-customer-checkout-process",
+    "layer": "business",
+    "archimate_type": "Business Process",
+    "name": "Customer Checkout Process",
+    "documentation": "Business process initiated by a customer when making a purchase or payment transaction, which triggers payment processing and credential verification services.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md:13"
+      },
+      {
+        "source_type": "interview",
+        "locator": "/evidence/interviews/cto_interview.txt:2"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-payment-processing-app-svc",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-customer-actor",
+    "layer": "business",
+    "archimate_type": "Business Actor",
+    "name": "Customer",
+    "documentation": "End-user customer who initiates payment processing and checkout activities within the system.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "interview",
+        "locator": "/evidence/interviews/cto_interview.txt:2"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-customer-checkout-process",
+        "type": "Assignment"
+      }
+    ]
+  }
+]

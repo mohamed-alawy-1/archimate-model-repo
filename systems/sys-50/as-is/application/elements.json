@@ -1,0 +1,245 @@
+[
+  {
+    "id": "sys-50-payment-service-app-comp",
+    "layer": "application",
+    "archimate_type": "Application Component",
+    "name": "Payment Processing Service",
+    "documentation": "Encapsulates payment execution and orchestration logic, handling payment charges via Payment Gateway integration.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/payment_service.py:6-17"
+      },
+      {
+        "source_type": "documentation",
+        "locator": "evidence/docs/architecture.md:8"
+      },
+      {
+        "source_type": "interview",
+        "locator": "evidence/interviews/cto_interview.txt:2"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-process-payment-app-func",
+        "type": "Assignment"
+      },
+      {
+        "target_id": "sys-50-payment-processing-app-svc",
+        "type": "Realization"
+      },
+      {
+        "target_id": "sys-50-payment-gateway-client-app-comp",
+        "type": "Serving"
+      },
+      {
+        "target_id": "sys-50-cap-payment-processing",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-payment-gateway-client-app-comp",
+    "layer": "application",
+    "archimate_type": "Application Component",
+    "name": "Payment Gateway Client Component",
+    "documentation": "Client integration component responsible for connecting to external/internal Payment Gateway endpoints for card processing.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/payment_service.py:20-24"
+      },
+      {
+        "source_type": "documentation",
+        "locator": "evidence/docs/architecture.md:9"
+      },
+      {
+        "source_type": "interview",
+        "locator": "evidence/interviews/cto_interview.txt:4"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-payment-gateway-app-if",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-payment-gateway-app-if",
+    "layer": "application",
+    "archimate_type": "Application Interface",
+    "name": "Payment Gateway API Interface",
+    "documentation": "API interface exposure endpoint (/charge) used to transmit payment transaction requests.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/payment_service.py:14-16"
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "id": "sys-50-user-service-app-comp",
+    "layer": "application",
+    "archimate_type": "Application Component",
+    "name": "User Management Service Component",
+    "documentation": "Manages user profile data, authentication routines, and database operations for user credentials.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/user_service.py:4-13"
+      },
+      {
+        "source_type": "documentation",
+        "locator": "evidence/docs/architecture.md:10"
+      },
+      {
+        "source_type": "interview",
+        "locator": "evidence/interviews/cto_interview.txt:6"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-authenticate-user-app-func",
+        "type": "Assignment"
+      },
+      {
+        "target_id": "sys-50-user-authentication-app-svc",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-process-payment-app-func",
+    "layer": "application",
+    "archimate_type": "Application Function",
+    "name": "Process Payment Function",
+    "documentation": "Automated application function executing payment processing requests against the gateway URL.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/payment_service.py:12-17"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-payment-payload-data-obj",
+        "type": "Access"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-authenticate-user-app-func",
+    "layer": "application",
+    "archimate_type": "Application Function",
+    "name": "Authenticate User Function",
+    "documentation": "Automated application function querying the user database store to validate user credentials.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/user_service.py:10-13"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-user-record-data-obj",
+        "type": "Access"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-payment-processing-app-svc",
+    "layer": "application",
+    "archimate_type": "Application Service",
+    "name": "Payment Processing Application Service",
+    "documentation": "Exposed application service providing monetary charge and payment execution capabilities.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/payment_service.py:6-17"
+      },
+      {
+        "source_type": "documentation",
+        "locator": "evidence/docs/architecture.md:8"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-customer-checkout-process",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-user-authentication-app-svc",
+    "layer": "application",
+    "archimate_type": "Application Service",
+    "name": "User Authentication Application Service",
+    "documentation": "Exposed application service facilitating user login and credential verification.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/user_service.py:10-13"
+      },
+      {
+        "source_type": "interview",
+        "locator": "evidence/interviews/cto_interview.txt:6"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-customer-checkout-process",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-payment-payload-data-obj",
+    "layer": "application",
+    "archimate_type": "Data Object",
+    "name": "Payment Payload Data Object",
+    "documentation": "Logical data structure encapsulating payment request attributes (amount, currency).",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/payment_service.py:14-16"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-res-customer-payment-data",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-user-record-data-obj",
+    "layer": "application",
+    "archimate_type": "Data Object",
+    "name": "User Record Data Object",
+    "documentation": "Logical data structure representing user account records and credentials in the database.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "code",
+        "locator": "evidence/code/user_service.py:12"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-res-customer-payment-data",
+        "type": "Realization"
+      }
+    ]
+  }
+]

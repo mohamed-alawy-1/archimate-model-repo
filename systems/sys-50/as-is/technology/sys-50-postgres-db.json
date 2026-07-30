@@ -1,0 +1,28 @@
+{
+  "id": "sys-50-postgres-db",
+  "layer": "technology",
+  "archimate_type": "System Software",
+  "name": "PostgreSQL Database Engine",
+  "documentation": "AWS RDS PostgreSQL 15.3 relational database engine (db.t3.micro) hosting the demodb database for persistent storage.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "infrastructure",
+      "locator": "/evidence/terraform/main.tf:aws_db_instance.postgres"
+    },
+    {
+      "source_type": "documentation",
+      "locator": "/evidence/docs/architecture.md"
+    },
+    {
+      "source_type": "interview",
+      "locator": "/evidence/interviews/cto_interview.txt"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-50-database-service",
+      "type": "Realization"
+    }
+  ]
+}

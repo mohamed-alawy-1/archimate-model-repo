@@ -1,0 +1,24 @@
+{
+  "id": "sys-50-user-authentication-app-svc",
+  "layer": "application",
+  "archimate_type": "Application Service",
+  "name": "User Authentication Application Service",
+  "documentation": "Exposed application service facilitating user login and credential verification.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "evidence/code/user_service.py:10-13"
+    },
+    {
+      "source_type": "interview",
+      "locator": "evidence/interviews/cto_interview.txt:6"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-50-customer-checkout-process",
+      "type": "Serving"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "sys-50-payment-payload-data-obj",
+  "layer": "application",
+  "archimate_type": "Data Object",
+  "name": "Payment Payload Data Object",
+  "documentation": "Logical data structure encapsulating payment request attributes (amount, currency).",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "evidence/code/payment_service.py:14-16"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-50-res-customer-payment-data",
+      "type": "Realization"
+    }
+  ]
+}

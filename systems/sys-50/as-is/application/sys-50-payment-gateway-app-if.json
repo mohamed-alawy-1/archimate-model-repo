@@ -1,0 +1,15 @@
+{
+  "id": "sys-50-payment-gateway-app-if",
+  "layer": "application",
+  "archimate_type": "Application Interface",
+  "name": "Payment Gateway API Interface",
+  "documentation": "API interface exposure endpoint (/charge) used to transmit payment transaction requests.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "evidence/code/payment_service.py:14-16"
+    }
+  ],
+  "relationships": []
+}

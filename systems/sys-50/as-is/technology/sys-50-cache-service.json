@@ -1,0 +1,20 @@
+{
+  "id": "sys-50-cache-service",
+  "layer": "technology",
+  "archimate_type": "Technology Service",
+  "name": "In-Memory Caching Service",
+  "documentation": "High-speed key-value and in-memory caching technology service provided by Redis ElastiCache.",
+  "confidence": "inferred",
+  "evidence": [
+    {
+      "source_type": "infrastructure",
+      "locator": "/evidence/terraform/main.tf:aws_elasticache_cluster.redis"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-50-payment-service-app-comp",
+      "type": "Serving"
+    }
+  ]
+}

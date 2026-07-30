@@ -1,0 +1,142 @@
+[
+  {
+    "id": "sys-50-ecs-cluster",
+    "layer": "technology",
+    "archimate_type": "Node",
+    "name": "Demo System ECS Cluster",
+    "documentation": "AWS ECS cluster (demo-system-cluster) providing container compute orchestration and execution environment for microservices workloads.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "infrastructure",
+        "locator": "/evidence/terraform/main.tf:aws_ecs_cluster.app_cluster"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-container-hosting-service",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-postgres-db",
+    "layer": "technology",
+    "archimate_type": "System Software",
+    "name": "PostgreSQL Database Engine",
+    "documentation": "AWS RDS PostgreSQL 15.3 relational database engine (db.t3.micro) hosting the demodb database for persistent storage.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "infrastructure",
+        "locator": "/evidence/terraform/main.tf:aws_db_instance.postgres"
+      },
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md"
+      },
+      {
+        "source_type": "interview",
+        "locator": "/evidence/interviews/cto_interview.txt"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-database-service",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-redis-cluster",
+    "layer": "technology",
+    "archimate_type": "Node",
+    "name": "Demo Redis ElastiCache Cluster",
+    "documentation": "AWS ElastiCache Redis cluster (demo-redis) running Redis 7 (cache.t3.micro) for in-memory data caching and high-speed data access.",
+    "confidence": "observed",
+    "evidence": [
+      {
+        "source_type": "infrastructure",
+        "locator": "/evidence/terraform/main.tf:aws_elasticache_cluster.redis"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-cache-service",
+        "type": "Realization"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-container-hosting-service",
+    "layer": "technology",
+    "archimate_type": "Technology Service",
+    "name": "Container Hosting Service",
+    "documentation": "Container runtime compute and orchestration technology service provided by the AWS ECS Cluster.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "infrastructure",
+        "locator": "/evidence/terraform/main.tf:aws_ecs_cluster.app_cluster"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-payment-service-app-comp",
+        "type": "Serving"
+      },
+      {
+        "target_id": "sys-50-user-service-app-comp",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-database-service",
+    "layer": "technology",
+    "archimate_type": "Technology Service",
+    "name": "Relational Database Service",
+    "documentation": "Relational database querying and data persistence service provided by PostgreSQL 15.3.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "infrastructure",
+        "locator": "/evidence/terraform/main.tf:aws_db_instance.postgres"
+      },
+      {
+        "source_type": "documentation",
+        "locator": "/evidence/docs/architecture.md"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-user-service-app-comp",
+        "type": "Serving"
+      },
+      {
+        "target_id": "sys-50-payment-service-app-comp",
+        "type": "Serving"
+      }
+    ]
+  },
+  {
+    "id": "sys-50-cache-service",
+    "layer": "technology",
+    "archimate_type": "Technology Service",
+    "name": "In-Memory Caching Service",
+    "documentation": "High-speed key-value and in-memory caching technology service provided by Redis ElastiCache.",
+    "confidence": "inferred",
+    "evidence": [
+      {
+        "source_type": "infrastructure",
+        "locator": "/evidence/terraform/main.tf:aws_elasticache_cluster.redis"
+      }
+    ],
+    "relationships": [
+      {
+        "target_id": "sys-50-payment-service-app-comp",
+        "type": "Serving"
+      }
+    ]
+  }
+]

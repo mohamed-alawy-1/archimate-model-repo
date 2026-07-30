@@ -1,0 +1,24 @@
+{
+  "id": "sys-50-payment-processing-app-svc",
+  "layer": "application",
+  "archimate_type": "Application Service",
+  "name": "Payment Processing Application Service",
+  "documentation": "Exposed application service providing monetary charge and payment execution capabilities.",
+  "confidence": "observed",
+  "evidence": [
+    {
+      "source_type": "code",
+      "locator": "evidence/code/payment_service.py:6-17"
+    },
+    {
+      "source_type": "documentation",
+      "locator": "evidence/docs/architecture.md:8"
+    }
+  ],
+  "relationships": [
+    {
+      "target_id": "sys-50-customer-checkout-process",
+      "type": "Serving"
+    }
+  ]
+}
